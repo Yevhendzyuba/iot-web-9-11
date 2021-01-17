@@ -19,12 +19,12 @@ export const Text = styled.div`
     flex-direction:column;
 `;
 
-export const TextTitle = styled.h1`
+export const Title = styled.h1`
        margin-bottom:0;
        font-size:50px;
 `;
 
-export const TextDescription = styled.p`
+export const Description = styled.p`
     font-size:19px;
     font-weight:500;
 `;

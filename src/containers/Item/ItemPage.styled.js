@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
 
   img {
-    width: 550px;
+    width: 570px;
     height: 380px;
     margin: 50px 100px;
   }
@@ -16,7 +16,7 @@ export const Data = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 100px auto;
+  margin: 90px auto;
 
   div {
     width: 250px;

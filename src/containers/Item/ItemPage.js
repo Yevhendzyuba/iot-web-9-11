@@ -3,9 +3,13 @@ import {Wrapper, Data} from "./ItemPage.styled"
 import Button from "../../components/Button/Button";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
+import {addCart} from "../../utils/store/slice/CosmetologySlice";
 import {Loader} from "semantic-ui-react";
+import {useDispatch} from "react-redux";
+
 
 function ItemPage() {
+    const dispatch = useDispatch;
 
     const {id} = useParams();
     const [cosmetologyBuild, setCosmetologyBuild] = useState();
@@ -30,11 +34,11 @@ function ItemPage() {
                 <div>
                     <Link exact to="/catalog">
                         <Button buttonText="Go Back" backgroundColor="#fff" color="#000000" fontSize="15px"
-                                padding="13px 20px"
+                                padding="15px 25px"
                                 border="1px solid "/>
                     </Link>
                     <Button buttonText="Add to cart" backgroundColor="#454545" color="#fff" fontSize="15px"
-                            padding="13px 25px"/>
+                            padding="13px 25px"/> onClick={() => dispatch(addCart(cosmetologyBuild))}/>
                 </div>
             </Data>
 

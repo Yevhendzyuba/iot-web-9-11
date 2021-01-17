@@ -4,8 +4,8 @@ import {
     Wrapper,
     Logo,
     Text,
-    TextTitle,
-    TextDescription,
+    Title,
+    Description,
     CardButtonWrapper
 } from "./HomePage.styled";
 import axios from "axios";
@@ -40,13 +40,13 @@ function HomePage() {
             <Wrapper>
                 <Logo src={CosmetologyIcon} alt="CosmetologyLogoIntro"/>
                 <Text>
-                    <TextTitle>Ella Bella Cosmetology</TextTitle>
-                    <TextDescription>Lorem ipsum dolor sit amet, consectetur adipisicing
+                    <Title>Ella Bella Cosmetology</Title>
+                    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit.<br/> Dignissimos
                         et expedita iure minus
                         temporibus. Asperiores blanditiis<br/> corporis dolore earum fugit laudantium nam perspiciatis,
                         reiciendis<br/> repellendus unde. Atque delectus exercitationem
-                        ratione.</TextDescription>
+                        ratione.</Description>
                 </Text>
             </Wrapper>
             <CardWrapper>
@@ -57,7 +57,7 @@ function HomePage() {
                 })}
             </CardWrapper>
             <CardButtonWrapper>
-                <Button buttonText="View more" backgroundColor="#ffb6c1" color="#fff" fontSize="16" padding="20px 50px"
+                <Button buttonText="View more" backgroundColor="#ffb6c1" color="#fff" fontSize="16" padding="18px 45px"
                         onClick={() => handleSetShowMoreState()}/>
             </CardButtonWrapper>
         </Container>
