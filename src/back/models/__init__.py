@@ -1,0 +1,1 @@
+from models.cosmetology_build import *
