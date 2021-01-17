@@ -4,14 +4,14 @@ export const MenuBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ffb6c1;
-  padding: 0 80px;
+  border-bottom: 2px solid #ffb6c1;
+  padding: 0 60px;
   
 
 `;
 
-export const DropdownBar = styled.div`
-  padding: 15px 0;
+export const DropBar = styled.div`
+  padding: 10px 0;
   display: flex;
 `;
 

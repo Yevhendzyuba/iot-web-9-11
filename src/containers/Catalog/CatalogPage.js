@@ -1,14 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import Button from "../../components/Button/Button";
 import Card from "../../components/Card/Card";
-import {Container, CardWrapper,CatalogSelect} from "../../components/Global.styled";
-import {MenuBar, DropdownBar} from "./Catalog.styled";
+import {Container, CardWrapper} from "../../components/Global.styled";
+import {MenuBar, DropBar} from "./CatalogPage.styled";
 import Filter from "../../components/Filter/Filter";
 import Search from "../../components/Search/Search";
 import axios from "axios";
+import Loader from "../../components/Loader/Loader";
 import {getFilteredName} from "../../api";
 
-function Catalog() {
+
+function CatalogPage() {
 
     const [items, setItems] = useState('');
     const [searchCosmetologyBuildName, setSearchCosmetologyBuildName] = useState('');
@@ -45,13 +47,13 @@ function Catalog() {
         <Container>
             <MenuBar>
                 <Search searchState={[searchCosmetologyBuildName, setSearchCosmetologyBuildName]}/>
-                <DropdownBar>
+                <DropBar>
                     <Filter name='Name' options={['Mask', 'Powder','Lipstick','Scrub','Powder']}
                             filterState={[filterCosmetologyBuildName, setFilterCosmetologyBuildName]}/>
-                </DropdownBar>
+                </DropBar>
                 <div>
                     <Button buttonText="Apply" backgroundColor="white" color="#000000" fontSize="15px"
-                            padding="10px 45px"
+                            padding="10px 55px"
                             border="1px solid #ffb6c1"/>
                 </div>
             </MenuBar>
@@ -64,4 +66,4 @@ function Catalog() {
     );
 }
 
-export default Catalog;
+export default CatalogPage;

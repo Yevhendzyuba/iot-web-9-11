@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ItemWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
 
   img {
@@ -11,7 +11,7 @@ export const ItemWrapper = styled.div`
 
 `;
 
-export const ItemData = styled.div`
+export const Data = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

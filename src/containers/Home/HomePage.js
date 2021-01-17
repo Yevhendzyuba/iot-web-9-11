@@ -7,7 +7,7 @@ import {
     TextTitle,
     TextDescription,
     CardButtonWrapper
-} from "./Home.styled";
+} from "./HomePage.styled";
 import axios from "axios";
 import CosmetologyIcon from "../../icons/homepage_logo.jpg";
 import Card from "../../components/Card/Card";
@@ -15,7 +15,7 @@ import Button from "../../components/Button/Button";
 import Cosmetology from "../../components/Cosmetology";
 
 
-function Home() {
+function HomePage() {
 
     const cosmetologyBuilds = useContext(Cosmetology)
 
@@ -66,4 +66,4 @@ function Home() {
 }
 
 
-export default Home;
+export default HomePage;

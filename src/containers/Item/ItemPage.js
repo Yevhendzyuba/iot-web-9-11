@@ -1,27 +1,26 @@
-import React, {useEffect,useState} from "react";
-import {ItemWrapper, ItemData} from "./Item.styled"
+import React, {useEffect, useState} from "react";
+import {Wrapper, Data} from "./ItemPage.styled"
 import Button from "../../components/Button/Button";
-import {Link,useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 import {Loader} from "semantic-ui-react";
 
-function Item() {
+function ItemPage() {
 
     const {id} = useParams();
     const [cosmetologyBuild, setCosmetologyBuild] = useState();
     useEffect(() => {
         axios.get(`http://127.0.0.1:5000/cosmetologyBuilds/${id}`)
             .then(response => setCosmetologyBuild(response.data));
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    if (!cosmetologyBuild){
+    if (!cosmetologyBuild) {
         return <Loader/>
     }
 
     return (
-        <ItemWrapper>
+        <Wrapper>
             <img src={cosmetologyBuild.img} alt="Sport"/>
-            <ItemData>
+            <Data>
                 <h1>{cosmetologyBuild.cosmetologyName}</h1>
                 <h3>Appoinment For: {cosmetologyBuild.appointment_for}</h3>
                 <h3>Produce Country: {cosmetologyBuild.produce_country}</h3>
@@ -32,16 +31,16 @@ function Item() {
                     <Link exact to="/catalog">
                         <Button buttonText="Go Back" backgroundColor="#fff" color="#000000" fontSize="15px"
                                 padding="13px 20px"
-                                border="1px solid"/>
+                                border="1px solid "/>
                     </Link>
                     <Button buttonText="Add to cart" backgroundColor="#454545" color="#fff" fontSize="15px"
                             padding="13px 25px"/>
                 </div>
-            </ItemData>
+            </Data>
 
-        </ItemWrapper>
+        </Wrapper>
     );
 
 }
 
-export default Item;
+export default ItemPage;

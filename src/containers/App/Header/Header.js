@@ -7,11 +7,11 @@ import {
 import {LinkingWrapper, LinkItem, Navbar, NavbarLogo} from "./Header.styled";
 import 'semantic-ui-css/semantic.min.css';
 import NavLink from "./Header.styled";
-import Home from "../../Home/Home";
-import Catalog from "../../Catalog/Catalog";
-import Cart from "../../Cart/Cart";
+import HomePage from "../../Home/HomePage";
+import CatalogPage from "../../Catalog/CatalogPage";
+import CartPage from "../../Cart/CartPage";
 import Logo from '../../../icons/homepage_logo.jpg';
-import Item from "../../Item/Item";
+import ItemPage from "../../Item/ItemPage";
 
 function Header() {
     return (
@@ -40,16 +40,16 @@ function Header() {
                 </Navbar>
                 <Switch>
                     <Route path="/catalog/item/:id">
-                        <Item/>
+                        <ItemPage/>
                     </Route>
                     <Route path="/cart">
-                        <Cart/>
+                        <CartPage/>
                     </Route>
                     <Route path="/catalog">
-                        <Catalog/>
+                        <CatalogPage/>
                     </Route>
                     <Route path="/">
-                        <Home/>
+                        <HomePage/>
                     </Route>
                 </Switch>
             </Router>
